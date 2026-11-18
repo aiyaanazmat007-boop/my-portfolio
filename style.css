@@ -1,0 +1,309 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b16;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #20263a;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #8b5cf6;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro {
+    color: #a78bfa;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 600px;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.btn {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #101629;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about h2 span {
+    color: #8b5cf6;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.projects {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.projects h2 span {
+    color: #8b5cf6;
+}
+
+.project-intro {
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #151b2b;
+    border: 1px solid #303953;
+    padding: 30px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+}
+
+.project-card h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    color: #a78bfa;
+    font-size: 13px;
+}
+
+.contact {
+    padding: 90px 20px;
+    text-align: center;
+    background: #101629;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact h2 span {
+    color: #8b5cf6;
+}
+
+.contact p {
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-btn:hover {
+    background: #15803d;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #080b16;
+    color: #94a3b8;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .about h2,
+    .projects h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* Hero Animation */
+
+.hero {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Project Card Animation */
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+/* Button Animation */
+
+.btn,
+.contact-btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.contact-btn:hover {
+    transform: translateY(-4px);
+}
+
